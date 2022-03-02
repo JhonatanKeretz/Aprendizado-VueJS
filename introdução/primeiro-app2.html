@@ -1,0 +1,38 @@
+<script src ="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <!-- este comando serve para alterar o title-->
+    <input type="text" v-on:input="alterTitle" >
+    <p>{{ title }}</p>
+</div>
+
+<script>
+
+    new Vue({
+
+        el: '#app',
+        data: {
+            title: 'Usando VueJS!'
+        },
+        // evento para alterar title
+        methods: {
+            alterTitle(event){
+                this.title = event.target.value
+
+            }
+        }
+    })
+
+</script>
+<!--Exemplos  de atalhos -->
+
+<!--div#estilo -->
+<div id="estilo"></div>
+<!--div.estilo -->
+<div class="estilo"></div>
+<!--div#estilo.estilo2 -->
+<div id="estilo" class="estilo2"></div>
+<!--img[src] -->
+<img src="" alt="">
+<!--p[jhona]#texto.estilo-3-->
+<p jhona="" id="texto" class="eestilo-3"></p>
