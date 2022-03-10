@@ -1,0 +1,20 @@
+<script src ="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p>{{ title }}</p>
+    <!--evento para alterar titulo-->
+    <input type="text" v-bind:value="title"
+           v-on:input="title = $event.target.value">
+           <!--mais exemplos-->
+           <hr>
+           <input type="text" v-model="title">
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            title: 'Usando VueJS!'
+        }
+    })
+</script>
